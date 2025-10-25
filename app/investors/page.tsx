@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { TrendingUp, Target, Zap, Globe, Users, BarChart3, Rocket, CheckCircle, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function InvestorsPage() {
   const advantages = [
@@ -220,13 +221,12 @@ export default function InvestorsPage() {
                 <div key={index} className="flex gap-6">
                   <div className="flex flex-col items-center">
                     <div
-                      className={`w-4 h-4 rounded-full ${
-                        milestone.status === "completed"
-                          ? "bg-primary"
-                          : milestone.status === "current"
-                            ? "bg-secondary"
-                            : "bg-muted-foreground/30"
-                      }`}
+                      className={`w-4 h-4 rounded-full ${milestone.status === "completed"
+                        ? "bg-primary"
+                        : milestone.status === "current"
+                          ? "bg-secondary"
+                          : "bg-muted-foreground/30"
+                        }`}
                     ></div>
                     {index < milestones.length - 1 && <div className="w-px h-16 bg-border mt-2"></div>}
                   </div>
@@ -297,10 +297,12 @@ export default function InvestorsPage() {
               </Card>
             </div>
 
-            <Button size="lg" className="text-lg px-8 py-6 group">
-              Connect with Our Team
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/contact#message" className="cursor-pointer">
+              <Button size="lg" className="w-auto sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6">
+                Connect with Our Team
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -17,6 +17,7 @@ import {
   Users,
   BarChart3,
   ArrowRight,
+  IndianRupeeIcon,
 } from "lucide-react"
 
 export default function ServicesPage() {
@@ -27,7 +28,7 @@ export default function ServicesPage() {
       description: "Book a pickup at your convenience through our user-friendly app.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupeeIcon,
       title: "Transparent Pricing",
       description: "Know the fair value of your scrap upfront with real-time pricing.",
     },
@@ -59,11 +60,11 @@ export default function ServicesPage() {
       title: "EPR Compliance Support",
       description: "Full traceability and reporting to meet regulatory obligations.",
     },
-    {
-      icon: Target,
-      title: "Zero-Waste Consulting",
-      description: "Expert guidance to optimize your waste footprint and achieve sustainability goals.",
-    },
+    // {
+    //   icon: Target,
+    //   title: "Zero-Waste Consulting",
+    //   description: "Expert guidance to optimize your waste footprint and achieve sustainability goals.",
+    // },
     {
       icon: Recycle,
       title: "Recycled Material Sourcing",
@@ -118,7 +119,7 @@ export default function ServicesPage() {
       </section>
 
       {/* For Households */}
-      <section className="py-20">
+      <section id="households" className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -154,7 +155,7 @@ export default function ServicesPage() {
       </section>
 
       {/* For Businesses */}
-      <section className="py-20 bg-muted/30">
+      <section id="businesses" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-2 space-y-6">
@@ -174,17 +175,13 @@ export default function ServicesPage() {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
-            <div className="lg:order-1 space-y-4">
+            <div className="grid grid-cols-2 gap-4">
               {businessFeatures.map((feature, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-4">
-                    <div className="flex gap-4">
-                      <feature.icon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold mb-2">{feature.title}</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
-                      </div>
-                    </div>
+                    <feature.icon className="h-8 w-8 text-primary mb-3" />
+                    <h4 className="font-semibold mb-2 text-sm">{feature.title}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -194,7 +191,7 @@ export default function ServicesPage() {
       </section>
 
       {/* For Governments */}
-      <section className="py-20">
+      <section id="governments" className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -214,17 +211,13 @@ export default function ServicesPage() {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
-            <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
               {governmentFeatures.map((feature, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-4">
-                    <div className="flex gap-4">
-                      <feature.icon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold mb-2">{feature.title}</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
-                      </div>
-                    </div>
+                    <feature.icon className="h-8 w-8 text-primary mb-3" />
+                    <h4 className="font-semibold mb-2 text-sm">{feature.title}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}

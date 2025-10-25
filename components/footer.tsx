@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Recycle, Mail, MapPin } from "lucide-react"
+import { Recycle, Mail, MapPin, Twitter, Linkedin, Instagram, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
@@ -22,6 +22,46 @@ export function Footer() {
               Building the Operating System for India's Circular Economy. Transforming waste into value for a
               sustainable future.
             </p>
+            
+            {/* Social Media Icons */}
+            <div className="flex gap-3 mt-4">
+              <Link
+                href="https://x.com/circulyst"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+                aria-label="Follow us on X (Twitter)"
+              >
+                <Twitter className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/circulyst/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/circulyst"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/share/1BTECBrq4Y/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors cursor-pointer"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -57,10 +97,30 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h3>
             <div className="space-y-2">
-              <div className="text-sm sm:text-base text-muted-foreground">Household Collection</div>
-              <div className="text-sm sm:text-base text-muted-foreground">Business Solutions</div>
-              <div className="text-sm sm:text-base text-muted-foreground">Government Partnerships</div>
-              <div className="text-sm sm:text-base text-muted-foreground">EPR Compliance</div>
+              <Link
+                href="/services#households"
+                className="block text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+              >
+                <div className="text-sm sm:text-base text-muted-foreground">Household Collection</div>
+              </Link>
+              <Link
+                href="/services#businesses"
+                className="block text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+              >
+                <div className="text-sm sm:text-base text-muted-foreground">Business Solutions</div>
+              </Link>
+              <Link
+                href="/services#governments"
+                className="block text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+              >
+                <div className="text-sm sm:text-base text-muted-foreground">Government Partnerships</div>
+              </Link>
+              <Link
+                href="/services"
+                className="block text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+              >
+                <div className="text-sm sm:text-base text-muted-foreground">EPR Compliance</div>
+              </Link>
             </div>
           </div>
 

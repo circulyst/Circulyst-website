@@ -100,7 +100,7 @@ export function ProblemVisionSection() {
                 </Card>
               </div>
 
-              <div className="space-y-4 sm:space-y-4 mt-6 sm:mt-8">
+              <div className="space-y-4 sm:space-y-4">
                 {/* Market Opportunity */}
                 <Card className="border-green-200 bg-gradient-to-br from-green-50 to-green-100 hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <CardContent className="p-4 sm:p-6 text-center">
@@ -108,7 +108,7 @@ export function ProblemVisionSection() {
                       <TrendingUp className="h-6 w-6 text-green-600" />
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">₹1.3L Cr</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground font-medium">Market opportunity</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-medium">An underrated market opportunity</div>
                     <div className="mt-0 text-xs text-green-600/70">Untapped potential</div>
                   </CardContent>
                 </Card>
