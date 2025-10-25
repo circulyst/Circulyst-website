@@ -94,8 +94,8 @@ export function ProblemVisionSection() {
                       <BarChart3 className="h-6 w-6 text-orange-600" />
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-2">15%</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground font-medium">Current recycling rate</div>
-                    <div className="mt-0 text-xs text-orange-600/70">Far below global average</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-medium">Current industry recycling rate</div>
+                    <div className="mt-0 text-xs text-orange-600/70">Far below the global average</div>
                   </CardContent>
                 </Card>
               </div>
@@ -109,7 +109,7 @@ export function ProblemVisionSection() {
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">₹1.3L Cr</div>
                     <div className="text-xs sm:text-sm text-muted-foreground font-medium">An underrated market opportunity</div>
-                    <div className="mt-0 text-xs text-green-600/70">Untapped potential</div>
+                    <div className="mt-0 text-xs text-green-600/70">Massive untapped growth potential</div>
                   </CardContent>
                 </Card>
 
@@ -120,7 +120,7 @@ export function ProblemVisionSection() {
                       <Recycle className="h-6 w-6 text-primary" />
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">80%</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground font-medium">Potential recycling rate</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-medium">High-potential recycling rate</div>
                     <div className="mt-0 text-xs text-primary/70">With proper infrastructure</div>
                   </CardContent>
                 </Card>
