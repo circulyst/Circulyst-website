@@ -19,6 +19,7 @@ import {
   ArrowRight,
   IndianRupeeIcon,
 } from "lucide-react"
+import Link from "next/link"
 
 export default function ServicesPage() {
   const householdFeatures = [
@@ -134,10 +135,12 @@ export default function ServicesPage() {
                 Say goodbye to informal scrap dealers and unclear pricing. Our user-friendly app makes selling your dry
                 waste convenient, transparent, and financially rewarding.
               </p>
-              <Button size="lg" className="group">
-                Pre-Register for the Circulyst App
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/pre-register" className="cursor-pointer">
+                <Button size="lg" className="group">
+                  Pre-Register for the Circulyst App
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {householdFeatures.map((feature, index) => (
@@ -170,10 +173,12 @@ export default function ServicesPage() {
                 Circulyst empowers businesses to achieve their sustainability targets, streamline operations, and
                 convert waste liabilities into valuable assets.
               </p>
-              <Button size="lg" className="group">
-                Request a Business Quote
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact#message" className="cursor-pointer">
+                <Button size="lg" className="group">
+                  Request a Business Quote
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {businessFeatures.map((feature, index) => (
@@ -206,10 +211,12 @@ export default function ServicesPage() {
                 Circulyst offers comprehensive partnerships to transform urban waste management, enhance public health,
                 and accelerate your smart city initiatives.
               </p>
-              <Button size="lg" className="group">
-                Explore Partnership Opportunities
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href="/contact#message" className="cursor-pointer">
+                <Button size="lg" className="group">
+                  Explore Partnership Opportunities
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {governmentFeatures.map((feature, index) => (
@@ -280,18 +287,23 @@ export default function ServicesPage() {
               sustainability goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6">
-                Get Started Today
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
-                Schedule a Consultation
-              </Button>
+              <Link href="/pre-register" className="cursor-pointer">
+                <Button size="lg" className="text-lg px-8 py-6">
+                  Get Started Today
+                </Button>
+              </Link>
+              <Link href="/contact#message" className="cursor-pointer">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       <Footer />
-    </main>
+    </main >
   )
 }

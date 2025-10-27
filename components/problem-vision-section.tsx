@@ -83,7 +83,7 @@ export function ProblemVisionSection() {
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-destructive mb-2">62M</div>
                     <div className="text-xs sm:text-sm text-muted-foreground font-medium">Tons of waste generated annually</div>
-                    <div className="mt-0 text-xs text-destructive/70">Growing at 3.5% yearly</div>
+                    <div className="mt-0 text-xs text-destructive/70">Constantly growing at 3.5% yearly</div>
                   </CardContent>
                 </Card>
 

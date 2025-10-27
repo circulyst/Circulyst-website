@@ -193,13 +193,21 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label htmlFor="phone" className="text-sm font-medium">
-                          Phone Number
+                          Phone Number *
                         </label>
                         <Input
                           id="phone"
+                          type="tel"
                           value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
-                          placeholder="Enter your phone number"
+                          onChange={(e) => {
+                            // Remove any non-numeric characters except +, -, (, ), and spaces
+                            const value = e.target.value.replace(/[^0-9+\-\s\(\)]/g, '');
+                            handleInputChange("phone", value);
+                          }}
+                          placeholder="+91 98765 43210"
+                          pattern="[0-9+\-\s\(\)]{10,15}"
+                          title="Please enter a valid phone number (10-15 digits)"
+                          required
                         />
                       </div>
                       <div className="space-y-2">

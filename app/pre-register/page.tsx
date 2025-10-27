@@ -120,7 +120,19 @@ export default function PreRegisterPage() {
 
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone/WhatsApp Number *</Label>
-                  <Input id="phone" name="phone" type="tel" placeholder="For updates and notifications" required />
+                  <Input 
+                    id="phone" 
+                    name="phone" 
+                    type="tel" 
+                    pattern="[0-9+\-\s\(\)]{10,15}"
+                    title="Please enter a valid phone number (10-15 digits)"
+                    required 
+                    onInput={(e) => {
+                      // Remove any non-numeric characters except +, -, (, ), and spaces
+                      const value = e.currentTarget.value.replace(/[^0-9+\-\s\(\)]/g, '');
+                      e.currentTarget.value = value;
+                    }}
+                  />
                 </div>
               </div>
 

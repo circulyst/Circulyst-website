@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://circulyst.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /test-device/
+
+# Allow all other content
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /investors
+Allow: /pre-register
